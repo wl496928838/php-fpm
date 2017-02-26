@@ -1,6 +1,10 @@
 # php-fpm
 适合中国用的php-fpm
 
+基于官方php-fpm镜像制作，https://hub.docker.com/_/php/
+
+因此版本使用最新的fpm。
+
 # 使用镜像说明
 
 已经安装了 pdo gdi 基本满足功能。
