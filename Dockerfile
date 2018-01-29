@@ -1,4 +1,4 @@
-FROM php:fpm
+FROM php7.1:fpm
 
 # 设置个时区
 ENV TZ=Asia/Shanghai
@@ -33,8 +33,8 @@ RUN apt-get update && apt-get install -y \
         libpng12-dev \
     && docker-php-ext-install iconv mcrypt \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install gd
-
+    && docker-php-ext-install gd \
+    && docker-php-ext-install opcache
 
 # 安装php扩展 pdo 必备
 RUN docker-php-ext-install pdo pdo_mysql
